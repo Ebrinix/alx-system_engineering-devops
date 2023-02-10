@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A1 | awk -F/ '{print $NF}' | sort -t. -k1.1,1nr -k2 | awk '{printf "%s,", $0} END {print ""}'
